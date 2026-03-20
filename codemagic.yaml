@@ -34,7 +34,7 @@ workflows:
     publishing:
       email:
         recipients:
-          - akwasipixels@gmail.com # Update with your email
+          - afrikrat@gmail.com
         notify:
           success: true
           failure: true
