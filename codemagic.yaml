@@ -26,9 +26,13 @@ workflows:
       - name: Precache Flutter artifacts
         script: |
           flutter precache --android
-      - name: Get dependencies
+      - name: Verify and Get dependencies
         script: |
-          flutter packages pub get
+          echo "Current pubspec.yaml google_fonts:"
+          grep "google_fonts:" pubspec.yaml
+          rm -f pubspec.lock
+          flutter pub cache clean --force
+          flutter pub get
       - name: Build Runner (Drift)
         script: |
           dart run build_runner build --delete-conflicting-outputs
