@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
+
 
 class AppTheme {
   // Prototype Tailwind color mapping
@@ -20,7 +20,7 @@ class AppTheme {
         surface: Colors.white,
         error: danger,
       ),
-      textTheme: GoogleFonts.interTextTheme(ThemeData.light().textTheme),
+      textTheme: const TextTheme(),
       appBarTheme: const AppBarTheme(
         backgroundColor: Colors.white,
         foregroundColor: Colors.black87,
@@ -44,7 +44,8 @@ class AppTheme {
         surface: Color(0xFF1E202C), // A slightly lighter dark for cards
         error: danger,
       ),
-      textTheme: GoogleFonts.interTextTheme(ThemeData.dark().textTheme),
+      textTheme: const TextTheme(),
+
       appBarTheme: const AppBarTheme(
         backgroundColor: backgroundDark,
         foregroundColor: Colors.white,
